@@ -1,2 +1,3 @@
 name: Prathmesh Savale, CS undergrad
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
