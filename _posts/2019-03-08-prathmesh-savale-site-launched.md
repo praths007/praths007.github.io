@@ -1,6 +1,8 @@
 ---
 layout: post
-title: "Prathmesh Savale, CS undergrad, Launches Site"
+comments: true
+title: "First Page"
+excerpt: "How to get things finally moving?"
 date: 2019-03-08
 ---
 

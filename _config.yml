@@ -1,3 +1,18 @@
-name: Prathmesh Savale, CS undergrad
+# Site settings
+title: Prathmesh Savale's Blog
+email: prathmesh.savale@gmail.com
+description: "All things Data Science and Video Games"
+baseurl: ""
+url: "http://praths007.github.io"
+twitter_username: praths_007
+github_username:  praths007
+
+# Build settings
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
+permalink: pretty
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
