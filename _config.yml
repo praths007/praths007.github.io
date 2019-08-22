@@ -1,11 +1,12 @@
 # Site settings
 title: Prathmesh Savale's Blog
 email: prathmesh.savale@gmail.com
-description: "All things Data Science and Video Games"
+description: "All things Data Science"
 baseurl: ""
 url: "http://praths007.github.io"
 twitter_username: praths_007
 github_username:  praths007
+linkedin_username: prathmeshsavale
 
 # Build settings
 markdown: kramdown
