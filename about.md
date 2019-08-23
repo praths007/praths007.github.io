@@ -6,8 +6,8 @@ permalink: /about/
 
 Hi, I am Prathmesh Savale!
 
-I am a Data Science aficionado and maintain this blog to write about things that I find difficult to understand.
-I believe that the best way to be sure that I have understood a particular topic is to synthesize the central idea into
+I am a Data Science aficionado and I maintain this blog to write about things I find difficult to understand.
+I believe that the best way to be sure I understand a particular topic is to synthesize the central idea into
 a post, and keep revisiting it to master the concept. 
 
 I hold a bachelors degree in Computer Engineering from University of Pune. I have worked with Mu Sigma Inc. as a 
