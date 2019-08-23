@@ -7,6 +7,8 @@ url: "http://praths007.github.io"
 # twitter_username: praths_007
 github_username:  praths007
 linkedin_username: prathmeshsavale
+# Google CSE (Custom Search Engine) ID
+google_cse_id: 005434432095865760839:5ivdk8yjixv
 
 # Build settings
 markdown: kramdown
