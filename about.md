@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: about
 permalink: /about/
 ---
 
@@ -16,6 +16,6 @@ Decision Scientist for over 3 years and currently work as a Data Analyst with Ki
 I like solving real world problems using applied mathematics, statistics and computer programming. In my free time I
 contribute to different open source repositories. 
 
-I love eating (a lot), reading, music and video games.
+I love eating (a lot :P), reading, music and video games.
 
 Here is my [resume](/assets/Prathmesh_Savale_CV.pdf).
