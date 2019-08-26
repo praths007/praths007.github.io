@@ -29,10 +29,68 @@ separate 2 different types of elements using a **decision boundary** in an n-dim
  ![apples_oranges_decision_boundary](/assets/logit_reg_1_apples_oranges.jpg){:height="200px" width="300px"}{: .center-image }
  
 #### Decision Boundary
- There are many ways to create this decision boundary. The most basic method is to fit a line through your data so as
- that there is minimum distance between the data points and your fitted line. And based on this fitted line you will be
- able to obtain your decision boundary. Eg. Consider that your fitted curve is a 
+ There are many ways to create this decision boundary. The most basic method is to fit a line through my data so
+ that there is minimum distance between the data points and my fitted line. And based on this fitted line I will be
+ able to obtain my decision boundary. Eg. Consider that my fitted curve is a 
  [sigmoid](https://en.wikipedia.org/wiki/Sigmoid_function) function, then for any value
- where \\( h _\theta(x) \\) >= 0.5,\\( y \\) = 1 and for \\( h _\theta(x) \\) < 0.5, \\( y \\) = 0. \\( h _\theta(x) \\)
-  is the hypothesis or "probability" of \\( y \\) being 1 or 0, given a value of \\( x \\). And \\( h _\theta() \\) 
+ where \\( h _\theta(x) \\) >= 0.5, \\( y \\) = 1 and for \\( h _\theta(x) \\) < 0.5, \\( y \\) = 0. Given a value of
+  \\( x \\), \\( h _\theta(x) \\) is the hypothesis or "probability" of \\( y \\) being 1 or 0. And \\( h _\theta() \\) 
   is the activation or model used to map \\( y \\) to \\( x \\), which in this case is a sigmoid function.
+  
+#### Gradient Descent - intuition
+##### What exactly is a Gradient?
+Recalling the equation of a straight line:  
+
+$$ 
+y = mx + c
+$$
+ 
+Rewriting this in a slightly different form (used by Prof. Ng in his lectures) we get:  
+
+$$
+h _\theta(x) = \theta_0 + \theta_1(x)
+$$
+ 
+Here \\( \theta \\) is the gradient analogous to slope m in the equation of a line. If I recall, the slope of a line in 
+a 2D plane it is calculated as \\( \frac{y_2 - y_1}{x_2 - x_1} \\) 
+**i.e. by how much will y change if x is changed by a certain amount?**
+
+Now I want to fit a line through my data in such a way that it passes through majority of the points. So that in the
+future if I want to **predict** the position of an unknown point I can just use the line I used to fit my data. What I 
+want is that the line that I am trying to fit exactly traces my data points so that the distance 
+(error in machine learning culture) between my fitted line and data points is minimum. 
+To do this I need to understand that by how much (magnitude) and in what direction I need to change the slope of my line
+ so that it fits majority of my data points.
+
+##### What is a cost function?
+
+This is where the cost function comes into picture. Cost is simply the distance (error) between my data points and 
+fitted line and ideally this must be as close to 0 as possible. By taking its partial derivative I calculate how much 
+ (magnitude) cost will change if I change \\( \\theta \\) by a certain amount (this is the same logic which is used for
+calculating slope of a line, i.e. magnitude of change in y with respect to x. And also a general idea of **calculus** 
+which deals with the mathematics of change of one quantity with respect to another.) 
+
+
+Getting an idea of the cost function and gradient I move on to the **descent** in gradient descent.
+
+##### What is descent in gradient descent?
+
+
+
+
+
+
+In case of logistic regression the cost function is logarithmic loss or 
+[logloss](https://datawookie.netlify.com/blog/2015/12/making-sense-of-logarithmic-loss/).
+
+
+Applying the same logic, \\( \theta \\) is a vector which has the partial derivatives of a cost function, 
+which is nothing but the rate of change of \\( y \\) (dependent variable) with the rate of change of \\( x \\) 
+(independent variable) for each independent variable. So if I have 2 features/independent variables I will have 2 
+values in \\( \theta \\).
+ 
+ 
+ 
+
+
+
