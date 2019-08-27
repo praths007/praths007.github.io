@@ -3,7 +3,7 @@ layout: post
 mathjax: true
 comments: true
 title: "Logistic Regression with Gradient Descent - Intuition"
-excerpt: "Understanding logistic regression using gradient descent"
+excerpt: "Idea behind cost function, gradient and direction of steepest ascent"
 date: 2019-03-15
 ---
 
