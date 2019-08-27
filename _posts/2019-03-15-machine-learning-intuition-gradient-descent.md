@@ -2,9 +2,9 @@
 layout: post
 mathjax: true
 comments: true
-title: "Logistic Regression with Gradient Descent - Intuition"
+title: "Gradient descent - intuition"
 excerpt: "Idea behind cost function, gradient and direction of steepest ascent"
-date: 2019-03-15
+date: 2019-03-18
 ---
 
 Since the past few weeks I have been taking the certificate course on machine learning taught by Andrew Ng. Even
@@ -14,29 +14,9 @@ of my curriculum I skipped some of the practical assignments and simply skimmed 
 
 Recently, I thought it would be a good exercise to go through the course once again and try to understand all its 
 nuances. One way of doing this was to implement all the assignments in R without using any library. Following is my
-attempt at implementation of logistic regression using gradient descent. This also includes the intuition behind
-gradient descent and cost function. Complete codes for this exercise can be found 
+attempt at understanding gradient descent. Complete codes for this exercise can be found 
 [here](https://github.com/praths007/machine_learning_intuition).
 
-#### Logisitic Regression - An Intro
-
-Logistic regression is one of the basic classification algorithms used in classical machine learning. Where we try to
-separate 2 different types of elements using a **decision boundary** in an n-dimensional space. The decision boundary is
- created in such away that it should completely separate the elements and no element of one type should be present
- with the element of another type (eg. the organization of apples and oranges in fruit basket is separated from one
- another using a cardboard strip. This cardboard strip acts as a decision boundary).
- 
- ![apples_oranges_decision_boundary](/assets/logit_reg_1_apples_oranges.jpg){:height="200px" width="300px"}{: .center-image }
- 
-#### Decision Boundary
- There are many ways to create this decision boundary. The most basic method is to fit a line through my data so
- that there is minimum distance between the data points and my fitted line. And based on this fitted line I will be
- able to obtain my decision boundary. Eg. Consider that my fitted curve is a 
- [sigmoid](https://en.wikipedia.org/wiki/Sigmoid_function) function, then for any value
- where \\( h _\theta(x) \\) >= 0.5, \\( y \\) = 1 and for \\( h _\theta(x) \\) < 0.5, \\( y \\) = 0. Given a value of
-  \\( x \\), \\( h _\theta(x) \\) is the hypothesis or "probability" of \\( y \\) being 1 or 0. And \\( h _\theta() \\) 
-  is the activation or model used to map \\( y \\) to \\( x \\), which in this case is a sigmoid function.
-  
 #### Gradient Descent - Intuition
 ##### What exactly is a Gradient?
 Recalling the equation of a straight line:  
@@ -84,6 +64,9 @@ maximum. But since I want my cost to be minimum I go in the opposite direction o
   With each **step** the gradient is recalculated and I move towards the opposite direction and possibly reach a global 
   minima. This minima is the lowest possible value that can be obtained for the function \\( J(\theta) \\) given
   a value of \\( \theta \\).
+  
+![gradient_descent](/assets/gradient_descent_1.png){:height="400px" width="600px"}{: .center-image }
+
 
 ##### [Why gradient points in the direction of steepest ascent?](https://math.stackexchange.com/questions/223252/why-is-gradient-the-direction-of-steepest-ascent)
 Recalling some basic vector calculus I know that the dot(.) product between 2 vectors equals:
