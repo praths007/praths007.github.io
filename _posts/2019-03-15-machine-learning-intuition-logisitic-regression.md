@@ -2,7 +2,7 @@
 layout: post
 mathjax: true
 comments: true
-title: "Logistic Regression - Intuition (in R)"
+title: "Logistic Regression with Gradient Descent - Intuition"
 excerpt: "Understanding logistic regression using gradient descent"
 date: 2019-03-15
 ---
@@ -37,7 +37,7 @@ separate 2 different types of elements using a **decision boundary** in an n-dim
   \\( x \\), \\( h _\theta(x) \\) is the hypothesis or "probability" of \\( y \\) being 1 or 0. And \\( h _\theta() \\) 
   is the activation or model used to map \\( y \\) to \\( x \\), which in this case is a sigmoid function.
   
-#### Gradient Descent - intuition
+#### Gradient Descent - Intuition
 ##### What exactly is a Gradient?
 Recalling the equation of a straight line:  
 
@@ -64,30 +64,40 @@ To do this I need to understand that by how much (magnitude) and in what directi
 
 ##### What is a cost function?
 
-This is where the cost function comes into picture. Cost is simply the distance (error) between my data points and 
+This is where the cost function \\( J(\theta) \\) comes into picture. Cost is simply the distance (error) between my 
+data points and 
 fitted line and ideally this must be as close to 0 as possible. By taking its partial derivative I calculate how much 
- (magnitude) cost will change if I change \\( \\theta \\) by a certain amount (this is the same logic which is used for
+ (magnitude) cost will change if I change \\( \theta \\) by a certain amount (this is the same logic which is used for
 calculating slope of a line, i.e. magnitude of change in y with respect to x. And also a general idea of **calculus** 
-which deals with the mathematics of change of one quantity with respect to another.) 
-
-
-Getting an idea of the cost function and gradient I move on to the **descent** in gradient descent.
+which deals with the mathematics of change of one quantity with respect to another.)
 
 ##### What is descent in gradient descent?
 
+Getting an idea of the cost function and gradient I move on to the **descent** in gradient descent. The central idea
+here is that I want to find the optimum value of \\( \theta \\) so that my cost \\( J(\theta) \\) is as low as possible 
+(close to zero).
+To do this I have to iterate over different values of \\( \theta \\). This change in value of \\( \theta \\) is done 
+using the **learning rate**/**step** or \\( \alpha \\) which is nothing but a small multiplication factor (0 to 1). 
+The gradient (partial derivative of \\( J(\theta) \\)) always points in the direction of the steepest ascent i.e. - 
+in the direction where change in cost is
+maximum. But since I want my cost to be minimum I go in the opposite direction or towards a **descent**.
+  With each **step** the gradient is recalculated and I move towards the opposite direction and possibly reach a global 
+  minima. This minima is the lowest possible value that can be obtained for the function \\( J(\theta) \\) given
+  a value of \\( \theta \\).
 
+##### [Why gradient points in the direction of steepest ascent?](https://math.stackexchange.com/questions/223252/why-is-gradient-the-direction-of-steepest-ascent)
+Recalling some basic vector calculus I know that the dot(.) product between 2 vectors equals:
 
+$$
+a.b = \left\lVert a \right\rVert \left\lVert b \right\rVert cos\theta
+$$
 
+Here the quantity can be maximum only when \\( cos\theta \\) is 1. Which is only possible if \\( \theta \\) is 0. i.e. both a and b are
+in the same direction. Extending this argument further, if we consider \\( grad(f(a)) \\) as a vector and an arbitrary 
+unit vector \\( v \\), we can project along this direction using the dot product \\( grad(f(a)).v \\), which is 
+also the definition of a directional derivative. And this dot product will be maximum only when both vectors are in the
+same direction. 
 
-
-In case of logistic regression the cost function is logarithmic loss or 
-[logloss](https://datawookie.netlify.com/blog/2015/12/making-sense-of-logarithmic-loss/).
-
-
-Applying the same logic, \\( \theta \\) is a vector which has the partial derivatives of a cost function, 
-which is nothing but the rate of change of \\( y \\) (dependent variable) with the rate of change of \\( x \\) 
-(independent variable) for each independent variable. So if I have 2 features/independent variables I will have 2 
-values in \\( \theta \\).
  
  
  
