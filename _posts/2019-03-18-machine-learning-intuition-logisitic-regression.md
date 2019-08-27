@@ -80,7 +80,7 @@ sigmoid = function(x){
 hthetax = mapply(sigmoid, z1)
 ```
 ##### 4. Calculate cost
-Here I calculate difference between my predicted \\( h_\theta(x) \\) and actual value y. This is calculated using a 
+Here I calculate difference between my predicted \\( h_\theta(x) \\) and actual value \\( y \\). This is calculated using a 
 [cost function](/2019/03/15/machine-learning-intuition-gradient-descent/). In my case the cost function is logarithmic
 loss or [logloss](https://datawookie.netlify.com/blog/2015/12/making-sense-of-logarithmic-loss).
 
