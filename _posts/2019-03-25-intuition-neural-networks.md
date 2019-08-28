@@ -157,79 +157,176 @@ cost
 ```
 
 ##### 4. Backpropagation
-###### 4.a. Calculate gradient
+This is where the **learning** in a neural network takes place. Backpropagation drives gradient descent. Based on the 
+cost calculated in the output layer the weights in each layer are adjusted until the cost is minimized. 
+The steps for doing backpropagation are as follows:
+- **Differentiate cost function**. Taking a partial derivative of the cost function gives the rate of change of cost 
+with an infinitesimally small change in \\( \theta \\). Similar to logistic regression this gives me the gradient vector
+to adjust the weights of the previous layer.
+- **Differentiate activation function of the hidden layers**. Now consider that each of the hidden layers has a cost
+associated with it based on its weights which is contributing to the total cost in the output layer. I want to adjust 
+weights in each layer in such a way that the next layer (including the output layer) will have minimum cost. How do I do
+this? By using the same logic I used in the output layer - I differentiate the function that has given me the output I
+need to pass to the next layer (in case of my output layer, the output is the final prediction) and this function for 
+ the each hidden layer is the activation function. 
+ Doing this I get the \\( \theta \\) adjustment for the previous layer. And this phenomenon
+**propagates** till the very first layer.
+
+A more detailed explanation for this is available [here](https://medium.com/datathings/neural-networks-and-backpropagation-explained-in-a-simple-way-f540a3611f5e) 
+
+###### 4.a. Calculate gradient and adjust weights for each layer
 My objective is to minimize this cost so I will use the partial derivative of my cost function to calculate by how much
-I need to change my \\( \theta \\) so that I am able to reduce the maximum cost. Here \\( \alpha \\) will be my step or
-learning rate by which I want to update my \\( \theta \\).
+I need to change my \\( \theta \\) so that I am able to reduce the maximum cost.
 
 ```python
-## gradient calculation
-alpha = 0.01
-theta_iter = alpha/nrow(train_x) * (t(train_x) %*% c(hthetax - train_y))
+## backpropagation (adjusting weights of previous layers wrt error in output layer)
+## delta3 = error in output layer
+## again done for each node in the layer
+delta3 = array(0L, c(dim(a3)))
+for(i in seq(1, m)){
+  for(k in seq(1, num_labels)){
+    delta3[i, k] = a3[i, k] - as.numeric(train_y[i,] == k)
+  }
+}
+
+# this is the total error
+delta3
+
+# we will be taking a negative gradient of this error/ cost to calculate the
+# direction of steepest descent and then adjust weights for each node of each layer
+# accordingly
+
+## used for backpropogation
+sigmoidGradient = function(x){
+  return(sigmoid(x) * (1 - sigmoid(x)))}
+delta2 = (delta3 %*% Theta2[,2:ncol(Theta2)]) * sigmoidGradient(z2)
+
+Theta1_grad = (1 / m) * t(delta2) %*% a1
+Theta2_grad = (1 / m) * t(delta3) %*% a2
 ``` 
-##### 6. Update \\( \theta \\)
-Then I will update theta according to my partial derivative.
+###### 4.b Update \\( \theta \\)
+Then I will update theta/gradients/weights for each layer according to my partial derivative. Here \\( \alpha \\) will be my step or
+learning rate by which I want to update my \\( \theta \\). Generally this \\( \alpha \\) must have a small value so that 
+the gradient does not update frantically.
 ```python
-## updating gradient
-init_theta = init_theta - theta_iter
-init_theta
+alpha = 0.001
+Theta1 = Theta1 - alpha * Theta1_grad
+Theta2 = Theta2 - alpha * Theta2_grad
 ```
 ##### Gradient descent
-The repetition of steps 1 to 6 to minimize cost is termed as gradient descent. The following section shows the code for
-gradient descent:
+The repetition of forward and backpropagation in steps 1 to 4 to minimize cost is gradient 
+descent. The following section shows the code for gradient descent:
 
 ```python
 cost = c()
-gradient_descent_for_logloss = function(alpha, iterations, initial_theta, train_x, train_y)
+num_labels = 2 # 0 and 1 in our case
+
+m = dim(train_x)[1]
+n = dim(train_x)[2]
+
+## number of nodes in 1st layer/input layer must
+## equal number of columns/ features of input data
+layer1_nodes = ncol(train_x)
+
+## this layer can have as many nodes as required
+## rule of thumb is usually 1.5 times or equal number
+layer2_nodes = trunc(ncol(train_x) * 1.5)
+
+# final output layer nodes = number of labels
+output_layer_nodes = 2
+
+gradient_descent_for_nn = function(alpha, iterations, train_x, train_y)
 {
   ## initialize theta (weights)
-  theta = initial_theta
+  
+  Theta1 = array(runif(n = gaussian(), min = 0, max = 1), c(layer2_nodes, layer1_nodes))
+  
+  Theta2 = array(runif(n = gaussian(), min = 0, max = 1), c(output_layer_nodes, layer2_nodes+1))
+  
+  
   for(i in seq(1, iterations)){
-
-  z1 = train_x %*% c(t(theta))
-  
-  ## apply activation
-  hthetax = mapply(sigmoid, rowSums(z1))
-  
-  ## calculating cost J(theta)
-  cost <<- c(cost, logloss_cost(train_y, hthetax))
-  
-  ## gradient calculation
-  ## using derivative of cost function J(theta)
-  theta_iter = alpha/nrow(train_x) * (t(train_x) %*% c(hthetax - train_y))
-  
-  ## gradient update
-  theta = theta - theta_iter
-  
-  slope = theta[2]/(-theta[3])
-  intercept = theta[1]/(-theta[3]) 
-  plot(iris_data$Petal.Width, iris_data$Petal.Length)
-  abline(intercept, slope)
-  Sys.sleep(0)
-  
+    
+    a1 = train_x
+    
+    z2 = a1 %*% t(Theta1)
+    
+    a2 = sigmoid(z2)
+    
+    a2 = cbind(1, a2)
+    
+    
+    z3 = a2 %*% t(Theta2)
+    
+    a3 = sigmoid(z3)
+    
+    
+    individual_train = array(0L, m)
+    individual_theta_k = array(0L, output_layer_nodes)
+    for(i in seq(1, m)){
+      for(k in seq(1, num_labels)){
+        individual_theta_k[k] = as.numeric(train_y[i,] == k)  * log(a3[i, k]) + 
+          (1 - as.numeric(train_y[i,] == k)) * log(1 - a3[i, k])
+      }
+      individual_train[i] = sum(individual_theta_k)
+    }
+    cost <<- c(cost, -(1/m) * sum(individual_train))
+    # cost = c(cost, cost)
+    # print(cost)
+    
+    
+    
+    delta3 = array(0L, c(dim(a3)))
+    for(i in seq(1, m)){
+      for(k in seq(1, num_labels)){
+        delta3[i, k] = a3[i, k] - as.numeric(train_y[i,] == k)
+      }
+    }
+    
+    # delta3
+    
+    
+    # delta2 = Theta2*delta3 * (derivative of activation function, which is sigmoid)
+    # delta2 = Theta2*delta3 * a3 * (1 - a3)
+    
+    delta2 = (delta3 %*% Theta2[,2:ncol(Theta2)]) * sigmoidGradient(z2)
+    
+    Theta1_grad = (1 / m) * t(delta2) %*% a1
+    Theta2_grad = (1 / m) * t(delta3) %*% a2
+    
+    # alpha = 0.001
+    Theta1 = Theta1 - alpha * Theta1_grad
+    Theta2 = Theta2 - alpha * Theta2_grad
+    
   }
-  return(theta)
+  return(list(Theta1, Theta2))
   
 }
+
+
 alpha = 0.01
 ## keep changing epochs, more epochs = more steps towards minimum cost
-epochs = 600
+epochs = 3000
 
-thetas = gradient_descent_for_logloss(alpha, epochs, as.matrix(c(0, 0.5, 0.5), 1), train_x, train_y)
+thetas = gradient_descent_for_nn(alpha, epochs, train_x, train_y)
 
-thetas
+plot(cost)
 
-################################################
 
-## predicting using theta values
-z_op = test_x %*% c(t(thetas))
+h1 = sigmoid(test_x %*% t(thetas[[1]]))
+h2 = sigmoid(cbind(1, h1) %*% t(thetas[[2]]))
 
-pred_prob = mapply(sigmoid, z_op)
 
-preds = ifelse(pred_prob > 0.5, 1, 0)
+preds = apply(h2, 1, function(x) which(x == max(x)))
 
 confusionMatrix(as.factor(preds), as.factor(test_y))
-## 96% accuracy
+## 100% accuracy
 ```
- 
 
+One way to track the success of gradient descent is to check if our cost reduces with each iteration. The graph
+should follow an elbow curve shown here.
+
+![gradient_descent_cost_vs_iteration](/assets/neural_net_2_cost_vs_iteration_num.png){:height="400px" width="500px"}{: .center-image }
+ 
+ If no significant reduction is observed even after multiple iterations it
+is understood that there is something wrong with the network setup or data and the model is not **learning** translating 
+to unsatisfactory results.
