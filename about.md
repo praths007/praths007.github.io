@@ -1,10 +1,10 @@
 ---
 layout: page
-title: about
+title: About
 permalink: /about/
 ---
 
-Hi, I am Prathmesh!
+Hi, I am Prathmesh Savale!
 
 I am a Data Science aficionado and I maintain this blog to write about things I find difficult to understand.
 I believe that the best way to be sure I understand a particular topic is to synthesize the central idea into
