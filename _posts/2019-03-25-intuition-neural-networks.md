@@ -172,7 +172,7 @@ need to pass to the next layer (in case of my output layer, the output is the fi
  Doing this I get the \\( \theta \\) adjustment for the previous layer. And this phenomenon
 **propagates** till the very first layer.
 
-A more detailed explanation for this is available [here](https://medium.com/datathings/neural-networks-and-backpropagation-explained-in-a-simple-way-f540a3611f5e) 
+A more detailed explanation for this is available [here](https://medium.com/datathings/neural-networks-and-backpropagation-explained-in-a-simple-way-f540a3611f5e).
 
 ###### 4.a. Calculate gradient and adjust weights for each layer
 My objective is to minimize this cost so I will use the partial derivative of my cost function to calculate by how much
@@ -328,5 +328,5 @@ should follow an elbow curve shown here.
 ![gradient_descent_cost_vs_iteration](/assets/neural_net_2_cost_vs_iteration_num.png){:height="400px" width="500px"}{: .center-image }
  
  If no significant reduction is observed even after multiple iterations it
-is understood that there is something wrong with the network setup or data and the model is not **learning** translating 
-to unsatisfactory results.
+is understood that there is something wrong with the network setup or data and the model is not **learning** resulting
+in a mediocre model.
