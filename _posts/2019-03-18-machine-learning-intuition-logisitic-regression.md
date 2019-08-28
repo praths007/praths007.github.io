@@ -2,8 +2,8 @@
 layout: post
 mathjax: true
 comments: true
-title: "Logistic regression using gradient descent"
-excerpt: "Implementing gradient descent in R for logit regression"
+title: "Logistic Regression using Gradient Descent"
+excerpt: "Implementing Gradient Descent in R for Logit Regression"
 date: 2019-03-18
 ---
 

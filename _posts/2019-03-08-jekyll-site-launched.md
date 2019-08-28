@@ -1,8 +1,8 @@
 ---
 layout: post
 comments: true
-title: "Jekyll and github pages"
-excerpt: "Blog setup using jekyll and github pages"
+title: "Jekyll and GitHub Pages"
+excerpt: "Blog setup using Jekyll and Github Pages"
 date: 2019-03-08
 ---
 

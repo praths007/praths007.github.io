@@ -2,8 +2,8 @@
 layout: post
 mathjax: true
 comments: true
-title: "Gradient descent - intuition"
-excerpt: "Idea behind cost function, gradient and direction of steepest ascent"
+title: "Gradient Descent Intuition"
+excerpt: "Idea behind Cost Function, Gradient and Direction of Steepest Ascent"
 date: 2019-03-15
 ---
 

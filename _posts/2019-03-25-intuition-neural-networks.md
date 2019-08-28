@@ -2,8 +2,8 @@
 layout: post
 mathjax: true
 comments: true
-title: "Neural network using gradient descent"
-excerpt: "Implementation of neural net layers, activation function and backpropagation using R"
+title: "Neural Network using Gradient Descent"
+excerpt: "Implementation of Neural Net Layers, Activation Function and Backpropagation in R"
 date: 2019-03-25
 ---
 
