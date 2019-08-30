@@ -25,6 +25,7 @@ navbar-links:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
 #    - Learn markdown: "http://www.markdowntutorial.com/"
   contact: "contact"
+  nav-search: "search"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -103,6 +104,8 @@ gtag: "UA-146356485-1"
 # Fill in your Google Analytics ID to track your website using GA
 google_analytics: "UA-146356485-1"
 
+# Google CSE (Custom Search Engine) ID
+google_cse_id: 005434432095865760839:5ivdk8yjixv
 # Google Tag Manager ID
 #gtm: ""
 
