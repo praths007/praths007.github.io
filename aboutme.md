@@ -1,10 +1,12 @@
 ---
 layout: page
-title: About
+title: About me
 permalink: /aboutme/
 ---
 
-Hi, I am Prathmesh Savale!
+![my_mugshot](/img/mugshot_me.jpg){: height="auto" width="200" style="border-radius:50%" .center-block :}
+
+Hi, I am Prathmesh!
 
 I am a Data Science aficionado and I maintain this blog to write about things I find difficult to understand.
 I believe that the best way to be sure I understand a particular topic is to synthesize the central idea into
