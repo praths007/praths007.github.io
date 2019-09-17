@@ -20,4 +20,4 @@ contribute to different open source repositories.
 
 I love eating (a lot :P), reading, music and video games.
 
-Here is my [resume](/assets/Prathmesh_Savale_CV.pdf).
+Here is my [resume](/assets/prathmesh_savale_resume.pdf).
