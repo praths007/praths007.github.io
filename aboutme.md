@@ -4,7 +4,7 @@ title: About me
 permalink: /aboutme/
 ---
 
-![my_mugshot](/img/mugshot_me.jpg){: height="auto" width="200" style="border-radius:50%" .center-block :}
+![my_mugshot](/img/mugshot_me.png){: height="auto" width="200" style="border-radius:50%" .center-block :}
 
 Hi, I am Prathmesh!
 
