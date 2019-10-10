@@ -15,9 +15,8 @@ a post, and keep revisiting it to master the concept.
 I hold a bachelors degree in Computer Engineering from University of Pune. I have worked with Mu Sigma Inc. as a 
 Decision Scientist for over 3 years and currently work as a Data Analyst with Kiewit Corporation.
 
-I like solving real world problems using applied mathematics, statistics and computer programming. In my free time I
-contribute to different open source repositories. 
+I like to solve real world problems using applied mathematics, statistics and computer programming.
 
-I love eating (a lot :P), reading, music and video games.
+In my free time I like to read non-fiction books on astronomy, human evolution and behavioral psychology.
 
-Here is my [resume](/assets/prathmesh_savale_resume.pdf).
+For more information checkout my [resume](/assets/prathmesh_savale_resume.pdf).
