@@ -62,7 +62,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570684450741</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="updated about me">
+      <created>1570684987959</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1570684987959</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -81,6 +88,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updated mugshot" />
     <MESSAGE value="added mugshot" />
-    <option name="LAST_COMMIT_MESSAGE" value="added mugshot" />
+    <MESSAGE value="updated about me" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated about me" />
   </component>
 </project>

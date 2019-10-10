@@ -18,5 +18,6 @@ Decision Scientist for over 3 years and currently work as a Data Analyst with Ki
 I like to solve real world problems using applied mathematics, statistics and computer programming.
 
 In my free time I like to read non-fiction books on astronomy, human evolution and behavioral psychology.
+I also have a special interest in speedcubing and can currently solve a 3x3 Rubik's cube in under a minute.
 
 For more information checkout my [resume](/assets/prathmesh_savale_resume.pdf).
