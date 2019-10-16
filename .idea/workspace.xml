@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6d05b773-c7ac-4819-b3e7-78ae33ba8bff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aboutme.md" beforeDir="false" afterPath="$PROJECT_DIR$/aboutme.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570684987959</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="speedcubing update">
+      <created>1570687393024</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570687393024</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,6 +95,7 @@
     <MESSAGE value="updated mugshot" />
     <MESSAGE value="added mugshot" />
     <MESSAGE value="updated about me" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated about me" />
+    <MESSAGE value="speedcubing update" />
+    <option name="LAST_COMMIT_MESSAGE" value="speedcubing update" />
   </component>
 </project>
