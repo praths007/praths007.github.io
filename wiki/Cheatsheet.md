@@ -1,9 +1,3 @@
----
-layout: page
-title: Cheatsheet
-
----
-
 ## Table of Contents
 * [General](#general)
 * [Scikit-Learn (Sklearn)](#scikit-learn-sklearn)

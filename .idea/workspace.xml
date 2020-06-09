@@ -19,35 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d05b773-c7ac-4819-b3e7-78ae33ba8bff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/wiki/Artificial-Neural-Networks-(ANN).md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Association-Rule-Learning.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Asynchronous-Advantage-Actor-Critic-(A3C).md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/AutoEncoders-(AE).md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Boltzmann-Machines-(BM).md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Cheatsheet.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Classification-Models.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Clustering-Models.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Convolutional-Neural-Networks-(CNN).md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Data-Preprocessing.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Deep-Convolutional-Q-Learning.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Deep-Natural-Language-Processing.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Deep-Q-Learning.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Dimensionality-Reduction.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Face-Recognition.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Generative-Adversarial-Networks-(GANs).md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Home.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Model-Selection.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Object-Detection.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Q-Learning.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Recurrent-Neural-Networks-(RNN).md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Regression-Models.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Reinforcement-Learning.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Self-Organizing-Maps-(SOM).md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/Types-of-Deep-Learning.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wiki/XGBoost.md" afterDir="false" />
+    <list default="true" id="6d05b773-c7ac-4819-b3e7-78ae33ba8bff" name="Default Changelist" comment="added wiki">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wiki/Cheatsheet.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Cheatsheet.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570687393024</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added wiki">
+      <created>1591725021312</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591725021312</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,12 +130,21 @@
     <MESSAGE value="added mugshot" />
     <MESSAGE value="updated about me" />
     <MESSAGE value="speedcubing update" />
-    <option name="LAST_COMMIT_MESSAGE" value="speedcubing update" />
+    <MESSAGE value="added wiki" />
+    <option name="LAST_COMMIT_MESSAGE" value="added wiki" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="687" y="162" width="618" height="783" key="find.popup" timestamp="1591724068122">
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1591725036377">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="687" y="162" width="618" height="783" key="find.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1591724068122" />
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1591725036377" />
+    <state x="687" y="162" width="618" height="783" key="find.popup" timestamp="1591726687464">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="687" y="162" width="618" height="783" key="find.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1591726687464" />
+    <state x="725" y="454" width="532" height="206" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1591725029357">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="725" y="454" width="532" height="206" key="git4idea.remote.GitConfigureRemotesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1591725029357" />
   </component>
 </project>
