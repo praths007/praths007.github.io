@@ -1,10 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6d05b773-c7ac-4819-b3e7-78ae33ba8bff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/wiki/Artificial-Neural-Networks-(ANN).md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Association-Rule-Learning.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Asynchronous-Advantage-Actor-Critic-(A3C).md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/AutoEncoders-(AE).md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Boltzmann-Machines-(BM).md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Cheatsheet.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Classification-Models.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Clustering-Models.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Convolutional-Neural-Networks-(CNN).md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Data-Preprocessing.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Deep-Convolutional-Q-Learning.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Deep-Natural-Language-Processing.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Deep-Q-Learning.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Dimensionality-Reduction.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Face-Recognition.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Generative-Adversarial-Networks-(GANs).md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Home.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Model-Selection.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Object-Detection.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Q-Learning.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Recurrent-Neural-Networks-(RNN).md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Regression-Models.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Reinforcement-Learning.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Self-Organizing-Maps-(SOM).md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Types-of-Deep-Learning.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/XGBoost.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,34 +57,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-14" />
-    <option name="y" value="-28" />
-    <option name="width" value="1295" />
-    <option name="height" value="524" />
-  </component>
   <component name="ProjectId" id="1Q6oTUtmPCA056m8fmcR8iCNF07" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sklearn_2/scikit-learn" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wiki" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wiki" />
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -89,9 +122,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -110,6 +141,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updated mugshot" />
@@ -117,5 +149,11 @@
     <MESSAGE value="updated about me" />
     <MESSAGE value="speedcubing update" />
     <option name="LAST_COMMIT_MESSAGE" value="speedcubing update" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="687" y="162" width="618" height="783" key="find.popup" timestamp="1591724068122">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="687" y="162" width="618" height="783" key="find.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1591724068122" />
   </component>
 </project>
