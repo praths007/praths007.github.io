@@ -12,6 +12,14 @@ Feature Selecting allows you to select which independent variables you want to u
 * [Kernel Principal Component Analysis (Kernel PCA)](#kernel-principal-component-analysis-kernel-pca)
 
 ## Linear Discriminant Analysis (LDA)
+Create new axis that maximum the separability of the categories.  This can be done by maximizing the distance between the means of the 2 categories. Then minimizing variation becomes:
+
+(mew1 - mew2)/s1^2 + s2^2
+
+where s1 and s2 is the scatter/spread/ variability/noise in the data.
+
+
+
 From the *n* independent variables of your dataset, LDA extracts *p* ≥ *n* new independent variables that separate the most classes of the dependent variable. LDA is a supervised model.
 
 See the code [here](https://github.com/Achronus/Machine-Learning-101/blob/master/coding_templates_and_data_files/machine_learning/6.%20dimensionality_reduction/0.%20linear_discriminant_analysis.py) for an example of a LDA. To make this use the [LinearDiscriminantAnalysis](http://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html) class from the Scikit-Learn library.
@@ -25,6 +33,14 @@ X_test= lda.transform(X_test)
 ```
 
 ## Principal Component Analysis (PCA)
+PCA works by projecting the data points on orthogonal lines/principal components. This way the X1 and X2 variables are represented using the eigen vector on the principle component. This eigen vector is nothing but the distance of datapoint from the origin calculated using Pythagoras theorem on X1 and X2. 
+
+PC1 = X1^2 + X2^2
+
+In turn X1 and X2 will be transformed into loading scores for principal component.
+
+More explanation in this [video](https://www.youtube.com/watch?v=FgakZw6K1QQ) by statquest with josh starmer.
+
 From the *m* independent variables of your dataset, PCA extracts *p* ≥ *m* new independent variables that explain the most variance of the dataset, regardless of the dependent variable. As the dependent variable is not considered, PCA is an unsupervised model.
 
 See the code [here](https://github.com/Achronus/Machine-Learning-101/blob/master/coding_templates_and_data_files/machine_learning/6.%20dimensionality_reduction/1.%20principal_component_analysis.py) for an example of a PCA. To make this use the [PCA](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html) class from the Scikit-Learn library.
