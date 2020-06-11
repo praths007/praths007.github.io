@@ -19,11 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d05b773-c7ac-4819-b3e7-78ae33ba8bff" name="Default Changelist" comment="updated for code warping">
-      <change afterPath="$PROJECT_DIR$/wiki/Docker.md" afterDir="false" />
+    <list default="true" id="6d05b773-c7ac-4819-b3e7-78ae33ba8bff" name="Default Changelist" comment="added model deployment in production">
+      <change afterPath="$PROJECT_DIR$/wiki/Model-Compression-and-Quantization.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/Tensorflow-Serving.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wiki/ci-cd-with-gitub.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wiki/Cheatsheet.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Cheatsheet.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wiki/Dimensionality-Reduction.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Dimensionality-Reduction.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wiki/Home.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Home.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../one_forecast" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -105,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591727350468</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added model deployment in production">
+      <created>1591812705327</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1591812705328</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,17 +148,18 @@
     <MESSAGE value="speedcubing update" />
     <MESSAGE value="added wiki" />
     <MESSAGE value="updated for code warping" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated for code warping" />
+    <MESSAGE value="added model deployment in production" />
+    <option name="LAST_COMMIT_MESSAGE" value="added model deployment in production" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1591790587729">
+    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1591844078133">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1591790587729" />
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1591727355984">
+    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1591844078133" />
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1591812711718">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1591727355984" />
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1591812711718" />
     <state x="687" y="162" width="618" height="783" key="find.popup" timestamp="1591726687464">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
