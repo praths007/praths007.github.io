@@ -17,7 +17,11 @@ made).
     * Can configure secrets
     * Notify for just push event
 
-## Creating pipelines
+## Creating 
+This [video](https://youtu.be/s73nhwYBtzE) explains creation of pipelines. High level steps are as follows:
+* Select pipeline and configure Jenkinsfile either from pre built or from specify SCM file from your own repo.
+* Different stages can be created if using with maven specify the version in jenkinsfile, then create integration tests in the stages within the jenkins file. The file is
+a groovy script.
 
 ## CI CD and continuous deployment terminology
 * Continuous integration is when feature branches are merged with the master branch creating build after each commit

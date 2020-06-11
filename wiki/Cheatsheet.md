@@ -165,4 +165,9 @@ def train_neural_network(x):
 
 train_neural_network(x)
 ```
+## OpenCV
+This [page](https://heartbeat.fritz.ai/opencv-python-cheat-sheet-from-importing-images-to-face-detection-52919da36433)
+gives a more detailed overview.
 
+cv2.imread(/path, cv2.IMG_GREYSCALE), cv2.imshow, cv2.imwrite, cv2.videocapture, 
+cv2.imgresize, img[1:200, 200:300] (this is for cropping)
