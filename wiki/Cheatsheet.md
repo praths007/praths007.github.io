@@ -169,5 +169,25 @@ train_neural_network(x)
 This [page](https://heartbeat.fritz.ai/opencv-python-cheat-sheet-from-importing-images-to-face-detection-52919da36433)
 gives a more detailed overview.
 
-cv2.imread(/path, cv2.IMG_GREYSCALE), cv2.imshow, cv2.imwrite, cv2.videocapture, 
-cv2.imgresize, img[1:200, 200:300] (this is for cropping)
+This [video](https://pythonprogramming.net/loading-images-python-opencv-tutorial/) by sentdex is start of tutorial
+series.
+* 1st video, initial commands:
+    cv2.imread(/path, cv2.IMG_GREYSCALE), cv2.imshow, cv2.imwrite, cv2.waitKey, cv2.DestroyAllWindows()
+    
+* 2nd video, video capturing: 
+```python
+cap =  cv2.VideoCapture(<camera number>/<video file name>)
+
+while True:
+    ret, frame = cap.read()
+    gray = cv2.cvrtColor(frame, cv2.COLOR_BGR2GRAY)
+    cv2.imshow('frame', frame)
+    cv2.imshow('gray', gray)
+    
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+cap.release()
+cv2.destroyAllWindows()
+```
+   
+* 3rd video, drawing things:

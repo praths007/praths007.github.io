@@ -19,10 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d05b773-c7ac-4819-b3e7-78ae33ba8bff" name="Default Changelist" comment="added model deployment in production">
+    <list default="true" id="6d05b773-c7ac-4819-b3e7-78ae33ba8bff" name="Default Changelist" comment="added opencv Cheatsheet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wiki/Cheatsheet.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Cheatsheet.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wiki/ci-cd-with-gitub.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/ci-cd-with-gitub.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wiki/Home.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Home.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wiki/Model-Compression-and-Quantization.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Model-Compression-and-Quantization.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wiki/Object-Detection.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Object-Detection.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wiki/ci-cd-with-gitub.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Cicd-with-Github.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591851510430</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added opencv Cheatsheet">
+      <created>1591853572889</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1591853572889</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,17 +164,18 @@
     <MESSAGE value="added wiki" />
     <MESSAGE value="updated for code warping" />
     <MESSAGE value="added model deployment in production" />
-    <option name="LAST_COMMIT_MESSAGE" value="added model deployment in production" />
+    <MESSAGE value="added opencv Cheatsheet" />
+    <option name="LAST_COMMIT_MESSAGE" value="added opencv Cheatsheet" />
   </component>
   <component name="WindowStateProjectService">
     <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1591844078133">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1591844078133" />
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1591851517834">
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1591853579575">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1591851517834" />
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1591853579575" />
     <state x="687" y="162" width="618" height="783" key="find.popup" timestamp="1591726687464">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>

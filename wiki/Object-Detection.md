@@ -85,3 +85,7 @@ def detect(frame, net, transform):
             j += 1
     return frame
 ```
+
+## Using tensorflow object detection
+Requires some dependencies like the protobuff compiler. 
+Uses pretained models from coco (common objects). Own model can also be trained.
