@@ -175,6 +175,7 @@ series.
     cv2.imread(/path, cv2.IMG_GREYSCALE), cv2.imshow, cv2.imwrite, cv2.waitKey, cv2.DestroyAllWindows()
     
 * 2nd video, video capturing: 
+
 ```python
 cap =  cv2.VideoCapture(<camera number>/<video file name>)
 
@@ -191,6 +192,7 @@ cv2.destroyAllWindows()
 ```
    
 * 3rd video, drawing things:
+
 ```python
 cv2.line(img, (0,0), (150, 150), (255, 255, 255), 15)
 
@@ -208,11 +210,13 @@ cv2.putText(img, "hello world", (0, 130), cv2.FONT_HERSHEY_SIMPLEX, 1, (20, 255,
 ```
 
 * Canny edge detection and laplacian edge detection
+
 ```python
 cv2.Canny(frame,,)
 ```
 
 * Template matching used for matching different small parts within an image.
+
 ```python
 w, h = to_match.shape[::-1]
 res = cv2.matchTemplate(base_img_gs, to_match, cv2.TM_CCOEFF_NORMED)
@@ -226,6 +230,7 @@ for pt in zip(*loc[::-1]):
 * cv2.GrabCut is for manually extracting different areas within an image.
 
 * Corner detection
+
 ```python
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 img_gray = np.float32(img_gray)
@@ -241,6 +246,7 @@ for corner in corners:
 
 * Feature matching
 The good thing about this is that the object need not have the same rotation, angle, lighting etc.
+
 ```python
 orb = cv2.ORB_create()
 
@@ -254,8 +260,10 @@ matches = sorted(matches, key=lambda x: x.distance)
 
 img3 = cv2.drawMatches(img1, kp1, img2, kp2, matches[:10], None, flags=2)
 ```
+
 * Foreground extraction (background reduction) in depth
 This is helpful in detecting objects that are moving.
+
 ```python
 cap = cv2.VideoCapture("video/people-walking.mp4")
 
