@@ -191,3 +191,101 @@ cv2.destroyAllWindows()
 ```
    
 * 3rd video, drawing things:
+```python
+cv2.line(img, (0,0), (150, 150), (255, 255, 255), 15)
+
+cv2.rectangle(img, (15, 25), (200, 150), (0, 255, 0), 5)
+
+cv2.circle(img, (100, 63), 55, (0, 0, 255), -1 <this fills in the circle, ie negative line width>)
+
+pts = np.array([[1,2], [3, 15], [7, 20], [19, 20]])
+pts = pts.reshape(-1, 1, 2)
+cv2.polylines(img, pts, True <connect final pt to first pt>, (0, 255, 4), 3)
+
+
+cv2.putText(img, "hello world", (0, 130), cv2.FONT_HERSHEY_SIMPLEX, 1, (20, 255, 255), 1, cv2.LINE_AA)
+
+```
+
+* Canny edge detection and laplacian edge detection
+```python
+cv2.Canny(frame,,)
+```
+
+* Template matching used for matching different small parts within an image.
+```python
+w, h = to_match.shape[::-1]
+res = cv2.matchTemplate(base_img_gs, to_match, cv2.TM_CCOEFF_NORMED)
+threshold = 0.8
+
+loc = np.where(res > threshold)
+for pt in zip(*loc[::-1]):
+    cv2.rectangle(base_img, pt, (pt[0]+w, pt[1]+h), (0, 255, 255), 2)
+```
+
+* cv2.GrabCut is for manually extracting different areas within an image.
+
+* Corner detection
+```python
+img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+img_gray = np.float32(img_gray)
+
+                                        # how many, min dist, max dist
+corners = cv2.goodFeaturesToTrack(img_gray, 100, 0.01, 10)
+corners = np.int0(corners)
+
+for corner in corners:
+    x, y = corner.ravel()
+    cv2.circle(img, (x, y), 3, 255, -1)
+```
+
+* Feature matching
+The good thing about this is that the object need not have the same rotation, angle, lighting etc.
+```python
+orb = cv2.ORB_create()
+
+kp1, des1 = orb.detectAndCompute(img1, None)
+kp2, des2 = orb.detectAndCompute(img2, None)
+
+bf = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
+
+matches = bf.match(des1, des2)
+matches = sorted(matches, key=lambda x: x.distance)
+
+img3 = cv2.drawMatches(img1, kp1, img2, kp2, matches[:10], None, flags=2)
+```
+* Foreground extraction (background reduction) in depth
+This is helpful in detecting objects that are moving.
+```python
+cap = cv2.VideoCapture("video/people-walking.mp4")
+
+fgbg = cv2.createBackgroundSubtractorMOG2()
+
+while True:
+    ret, frame = cap.read()
+    fgmask = fgbg.apply(frame)
+
+    cv2.imshow("original", frame)
+    cv2.imshow("fg", fgmask)
+
+    cv2.waitKey(10000)
+
+cap.release()
+```
+* Object detection with Haar Cascade
+
+```python
+while True:
+    ret, frame = cap.read()
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+    for (x,y,w,h) in faces:
+        cv2.rectangle(frame, (x,y), (x+w, y+h), (255,0,0), 2)
+        roi_gray = gray[y:y+h, x:x+w]
+        roi_color = frame[y:y+h, x:x+w]
+        eyes = eye_cascade.detectMultiScale(roi_gray)
+        for (ex,ey,ew,eh) in eyes:
+            cv2.rectangle(roi_color, (ex,ey), (ex+ew, ey+eh), (0,255,0), 2)
+
+    cv2.imshow("frame", frame)
+```
