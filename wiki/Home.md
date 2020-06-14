@@ -51,6 +51,6 @@ The cheatsheet can be found [here](/wiki/Cheatsheet)
 
 ### Running ML models in production
 * [Model compression techniques](/wiki/Model-Compression-and-Quantization)
-* [Tensorflow serving](/wiki/Tensorflow-Serving)
+* [Tensorflow serving Tensorflow Lite](/wiki/Tensorflow-Serving-Tf-Lite)
 * [Docker](/wiki/Docker)
 * [CI/CD with Github](/wiki/Cicd-with-Github)

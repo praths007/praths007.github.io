@@ -1,6 +1,9 @@
 ## Table of contents
 
 - [Serving using tensorflow](#serving-using-tensorflow)
+    -[Mini batching](#mini-batching)
+    -[Some positive points](#some-positive-points)
+- [Edge device serving using tensorflowlite](#edge-device-serving-using-tensorflowlite)
 
 ## Serving using tensorflow
 This [video](https://youtu.be/264nTqrPCJQ) explains things in detail. The high level steps are as follows:
@@ -26,10 +29,15 @@ There is another method using gRPC which is more efficient.
 
 REST api can also be implemented in flask.
 
-## Mini batching
+### Mini batching
 Mini batching is the key feature of tensorflow serving which is difficult to do in Flask.
 When multiple clients keep requesting the server, tensorflow serving puts them in a mini batch.
 
-## Some positive points
+### Some positive points
 * Automatic update of model load and unload because there is a 2 second polling.
 * NVIDIA TensorRT used to quantize from float32 to float8 during inference.This can be added as an option.
+
+
+## Edge device serving using tensorflowlite
+* New lighter version of tensorflow where models can be saved as TFlite flatbuffer using TFlite.
+* Support for keras API.
