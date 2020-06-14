@@ -45,6 +45,10 @@ The cheatsheet can be found [here](/wiki/Cheatsheet)
 ### Natural Language Processing
 * [Deep Natural Language Processing](/wiki/Deep-Natural-Language-Processing)
 
+### ML, DL, NLP and Computer Vision APIs
+* [Tensorflow](/wiki/Tensorflow-Api)
+* [OpenCV](/wiki/Opencv-Api)
+
 ### Running ML models in production
 * [Model compression techniques](/wiki/Model-Compression-and-Quantization)
 * [Tensorflow serving](/wiki/Tensorflow-Serving)

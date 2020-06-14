@@ -165,6 +165,7 @@ def train_neural_network(x):
 
 train_neural_network(x)
 ```
+
 ## OpenCV
 This [page](https://heartbeat.fritz.ai/opencv-python-cheat-sheet-from-importing-images-to-face-detection-52919da36433)
 gives a more detailed overview.
