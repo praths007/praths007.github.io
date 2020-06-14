@@ -5,6 +5,7 @@
    * [Video Capturing and Waitkey](#video-capturing-and-waitkey)
    * [Drawing Shapes](#drawing-shapes)
    * [Thresholding](#thresholding)
+   * [Filtering](#filtering)
    * [Edge detection](#edge-detection)
    * [Template Matching](#template-matching)
    * [Corner Detection](#corner-detection)
@@ -80,6 +81,39 @@ gaus = cv2.adaptiveThreshold(img_greyscaled, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C
 
 ```
 
+### Filtering
+
+```python
+    ret, frame = cap.read()
+
+    # hsv hue(color) sat(intensity) value
+    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+    # lower and upper values for color filtering
+    lower_red = np.array([90, 0, 0])
+    upper_red = np.array([110, 255, 255])
+
+    # filtering
+    mask = cv2.inRange(hsv, lower_red, upper_red)
+    masked_img = cv2.bitwise_and(frame, frame, mask=mask)
+    # blur = cv2.GaussianBlur(masked_img, (15, 15), 0)
+
+    # morphing
+    kernel = np.ones((5, 5), np.uint8)
+    erosion = cv2.erode(masked_img, kernel, iterations=1)
+    dialation = cv2.dilate(masked_img, kernel, iterations=1)
+
+    opening = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
+    closing = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
+
+    median = cv2.medianBlur(masked_img, 15)
+
+    cv2.imshow("video_cap", masked_img)
+    cv2.imshow("opening", opening)
+    cv2.imshow("closing", closing)
+
+```
+
 ### Edge Detection
 
 ```python
@@ -121,7 +155,7 @@ for corner in corners:
 
 ### Feature Matching
 The good thing about this is that the object need not have the same rotation, angle, lighting etc.
-
+Homography or brute forcing.
 ```python
 orb = cv2.ORB_create()
 
