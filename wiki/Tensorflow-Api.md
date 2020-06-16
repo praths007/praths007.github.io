@@ -1,13 +1,13 @@
 ## Table of Contents
 * [Sample Code](#sample-code)
+<!---
 * [TensorFlow](#tensorflow)
-   * [General](#general-1)
+   * [General](#general)
    * [Data Preprocessing](#data-preprocessing)
    * [Model Selection](#model-selection)
    * [Accuracy & Predictions](#accuracy--predictions)
    * [Models](#models)
-
-
+   -->
 
 ## Sample Code
 

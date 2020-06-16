@@ -47,6 +47,7 @@ The cheatsheet can be found [here](/wiki/Cheatsheet)
 
 ### ML, DL, NLP and Computer Vision APIs
 * [Tensorflow](/wiki/Tensorflow-Api)
+* [Keras](/wiki/Keras-Api)
 * [OpenCV](/wiki/Opencv-Api)
 
 ### Running ML models in production
