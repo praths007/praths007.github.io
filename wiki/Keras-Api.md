@@ -268,8 +268,10 @@ nans
 
 ### Training parameters
 * optimizers
-* batch size
+* batch size - number of rows passed between for 1 complete forward and backward pass
 * learning rate
+* epochs - number of times the network sees the entire data
+* iterations (not in keras) - 1 complete forward and backward pass
 
 ```python
 def evaluate_network(dropout, lr, neuronPct, neuronShrink):
