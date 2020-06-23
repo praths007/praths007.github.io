@@ -3,6 +3,7 @@
    * [General](#general)
    * [Known issues](#known-issues)
    * [Regularization techniques](#regularization-techniques)
+   * [Batch Normalization](#batch-normalization)
    * [Saving Models](#saving-models)
    * [Callbacks](#callbacks)
         * [Early Stopping](#early-stopping)
@@ -12,7 +13,7 @@
    * [Bulding ensembles using keras and sklearn](#bulding-ensembles-using-keras-and-sklearn)
    * [Hyperparameter tuning](#hyperparameter-tuning)
    * [Bayesion Hyperparameter Optimization](#bayesion-hyperparameter-optimization)
-   
+   * [Transfer learning for computer vision](#transfer-learning-for-computer-vision)
 ## Keras
 ### General
 * Bias is the constant term in y=mx+c. Where m is the weight or Gradient and c is the constant or the bias. A bias is
@@ -21,6 +22,21 @@ needed to shift the curve from the origin. This helps in fitting data across any
 ### Known issues
 * The weights are randomized before we start training a NN. So the output is going to be different and the error for
 train will also be different each we run NN. Some of ways to overcome this is using bootstrap aggregating, dropouts etc.
+
+### Batch Normalization
+This [video](https://youtu.be/nUUqwaxLnWs) by Andrew NG explains this the best.
+Normalizing input features to mean zero and variance 1 speeds up learning.
+Batch normalization does similar thing for hidden layers.
+Intuition- <br>
+When training images with black cats, the network may not work well with colored cats.
+This is because of the shift in the data and decision boundary wrt the origin.
+The input to each hidden layer from the previous layer shifts around. (like inputs which are not normalized)
+So it is better to add batch normalization layer.
+
+It also has a slight regularization effect.
+Each mini batch is scaled by mean/variance of only that mini batch. therefore this adds noise to each hidden layers
+activations.
+Larger mini batch reduces this noise. So regularization effect.
 
 ### Regularization techniques
 * Weight sharing- as done in CNN's, applying the same filters across the image.
@@ -328,7 +344,7 @@ optimizer.maximize(init_points=10, n_iter=100)
 ```
 
 
-## LSTMS
+## LSTM
 3 axes-
 axis 1: training set elements (sequences) must be same size as y size
 axis 2: members of the sequence (day 1, day2, day3, day4)
@@ -350,3 +366,51 @@ def to_sequence(seq_size, obs):
         y.append(after_window)
 
 ```
+
+
+## Transfer learning for computer vision
+
+### Use of MobileNet
+It is used extensively because it is lightweight in terms of size and computations
+```python
+from tensorflow.keras.applications import MobileNet
+
+model = MobileNet(weights="imagenet", include_top=True)
+# if include_top is False we shear the output layer during transfer learning
+```
+
+For retraining new layers and assigning layers as trainable or non trainable
+```python
+base_model = MobileNet(weights="imagenet", include_top=False)
+base_model.summary() # get the summary to understand how many output layers are present and which ones were removed
+x=base_model.output
+x.add(GlobalAveragePooling2D())
+x.add(Dense())
+x.add(Dense())
+preds=x.add(Dense(3, activation="softmax"))
+
+
+model = Model(iputs=base_model.input, outputs=preds)
+
+for layer in model.layers[:20]: # input layers not trainable
+    layer.trainable=False
+for layer in model.layers[20:]: new layers that were added are trainable
+    layer.trainable=True
+```
+
+Keras can also read from a directory
+Create folder names with class names and put images inside themwith any name.
+```python
+from tensorflow.keras.preprocessing.image import ImageDataGenerator, img_to_array
+from tensorflow.applications.resnet50 import preprocess_input
+
+train_datagen = ImageDatagenerator(preprocessing_function=preprocess_input)
+train_datagen.flow_from_directory("Users/praths/Downloads",
+target_size=(128,128),
+clor_mode="rgb",
+batch_size=1,
+class_mode="catagorical",
+shuffle=True)
+```
+
+Transfer learning can also be used for getting vector embeddings for NLP and doing feature engineering.

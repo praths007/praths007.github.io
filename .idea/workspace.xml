@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d05b773-c7ac-4819-b3e7-78ae33ba8bff" name="Default Changelist" comment="added epoch, batch, iteration info" />
+    <list default="true" id="6d05b773-c7ac-4819-b3e7-78ae33ba8bff" name="Default Changelist" comment="updated resume">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wiki/Keras-Api.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Keras-Api.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wiki/Tensorflow-Serving-Tf-Lite.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Tensorflow-Serving-Tf-Lite.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wiki/XGBoost.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/XGBoost.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,13 +42,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/wiki" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/wiki" />
       <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/wiki" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -184,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592332322651</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="updated resume">
+      <created>1592471823647</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1592471823647</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,21 +240,22 @@
     <MESSAGE value="added keras api" />
     <MESSAGE value="updated keras api" />
     <MESSAGE value="added epoch, batch, iteration info" />
-    <option name="LAST_COMMIT_MESSAGE" value="added epoch, batch, iteration info" />
+    <MESSAGE value="updated resume" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated resume" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1592151918299">
+    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1592632619122">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1592151918299" />
+    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1592632619122" />
     <state x="72" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1592284710097">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="72" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1592284710097" />
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1592332335858">
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1592471830436">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1592332335858" />
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1592471830436" />
     <state x="687" y="162" width="618" height="783" key="find.popup" timestamp="1591726687464">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
