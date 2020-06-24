@@ -14,6 +14,9 @@
    * [Hyperparameter tuning](#hyperparameter-tuning)
    * [Bayesion Hyperparameter Optimization](#bayesion-hyperparameter-optimization)
    * [Transfer learning for computer vision](#transfer-learning-for-computer-vision)
+   * [YOLO Darknet for object detection](#yolo-darknet-for-object-detection)
+   * [GANs](#gans)
+
 ## Keras
 ### General
 * Bias is the constant term in y=mx+c. Where m is the weight or Gradient and c is the constant or the bias. A bias is
@@ -414,3 +417,80 @@ shuffle=True)
 ```
 
 Transfer learning can also be used for getting vector embeddings for NLP and doing feature engineering.
+
+## YOLO Darknet for object detection
+YOLO - you only look once.
+This has a single CNN but a very complex output layer and can detect multiple objects within the same frame.
+Essentially it resizes image and runs a CNN on it. It gets lot of bounding boxes with predictions. Then we set a 
+threshold, things above this are considered rest are thrown away.
+
+The YOLO is a combination of regression and classification.
+
+The total number of bounding boxes i.e. the output layer neurons is always fixed.
+
+The input and dense layers are the same. They are CNN, maxpooling and dense.
+The output layer has - 
+x, y, w, h, labels (relative probabilities of each label), confidence of the rectangle (of the label).
+So number of neurons are S*S*(B.5+C).
+S - number of dimensions of YOLO grid overlaid across the image.
+B - number oof potential bounding rectangles.
+5 - x, y, w, h, labels
+C - confidence.
+
+ Trouble recognizing small highly dense things. like flock of birds on horizon.
+ DarkNet - written in C (original implementation of YOLO)
+ DarkFlow - implementation in python using tensorflow.
+ 
+ The output is the coordinates. Stuff that can be done is a lot. eg. in realtime if the signal turns green move car.
+
+## GANs
+Generative adversarial neural network. 
+2 NNs working together to produce highly realistic image or other form of data.
+To spot if an image is fake look at background. It is usually dreamy or surreal. Look at shoulders
+they cannot be predicted easily with GANs.
+How does a GAN work?
+
+Generative NN takes random data and puts out images/ random data.
+Discriminator takes in pictures and tries to detect if the images are real.
+Both fight against each other to make each other better which is being adversaries of each other.
+At the end one of them is kept and other is discarded. SO for face generator generator is kept and 
+discriminator is discarded.
+
+### Discriminator
+Job is to detect if the image coming into the NN is real or fake.
+Usually ip is h,w,color depth.
+
+### Generator
+Job is to take a random seed [12,2,55,3] as input (a random array of high dimension) and gives out a random face. While
+training a GAN use a specific distribution and while generating faces use seed values from the same distribution.
+
+### Training
+While training only one of the NNs weights must be modified. SO while training generator discriminator weights must not
+be updated. Its cheating.
+
+Training the generator - take random seeds send to generator. Which generates random faces. Send that to discriminator
+and get y^. Now the y is always 1. Calculate the backprop based on y and y^ and adjust weights in generator. Things to
+not eis that generator never sees the training set and y is always 1.
+
+Training the discriminator - now we have balanced y. training data is used now. it is given as input to discriminator
+along with the data from generator and then backprop is calculated. wrt y and y^ and discriminator weights are adjusted.
+
+```python
+import tensorflow
+
+tensorflow.gradienttape #is used for automatic differentiation in backprop
+```
+
+### Nvidia styleGAN2
+transfer learning. Comes with pre trained NNs.
+can generate faces, cars etc...
+
+### GANs for semi supervised training
+Usually for face generation we discard the discriminator. But if we are using semi supervised we will discard generator.
+eg. the discriminator will tell the difference between fake and real medical records. Along with this we will have a
+discriminator who can get 4 different classes and have a separete fake record. 
+Another example is street house view - Data from addresses taken from images from sides of buildings.
+GAN could classify digit types even if it doesnt have labels on them.
+
+GANs can be used for upscaling old images to better resolution. Stuff like DeepFake as well.
+Old video game upscaling too.
