@@ -6,6 +6,7 @@
 - [Edge device serving using tensorflowlite](#edge-device-serving-using-tensorflowlite)
 - [Deploying models on AWS](#deploying-models-on-aws)
 
+
 ## Serving using tensorflow
 This [video](https://youtu.be/264nTqrPCJQ) explains things in detail. The high level steps are as follows:
 * Save the model
@@ -40,8 +41,15 @@ When multiple clients keep requesting the server, tensorflow serving puts them i
 
 
 ## Edge device serving using tensorflowlite
+Positive points of tflite <br>
 * New lighter version of tensorflow where models can be saved as TFlite flatbuffer using TFlite.
 * Support for keras API.
+* It is cross platform so can be used for android as well as iOS.
+
+We might not want to score model on the cloud. Transfer restrictions etc. we dont want cloud to do everything.
+
+
+
 
 ## Deploying models on AWS
 We can save the weights and json separately.

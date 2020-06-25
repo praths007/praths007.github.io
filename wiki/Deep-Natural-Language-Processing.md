@@ -6,6 +6,8 @@
 * [Greedy Decoding](#greedy-decoding)
 * [Beam Search Decoding](#beam-search-decoding)
 * [Attention Mechanisms](#attention-mechanisms)
+* [Word2Vec](#Word2Vec)
+* [Layer Embeddings](#)
 
 ## Natural Language Processing (NLP)
 Natural Language Processing consists of teaching machines to understand what is said in spoken and written words. For example: when you dictate something into your iPhone/Android device, that is then converted to text – this is done by using an NLP algorithm.
@@ -209,4 +211,32 @@ def seq2seq_model(inputs, targets, keep_prob, batch_size, sequence_length, answe
     decoder_embedded_input = tf.nn.embedding_lookup(decoder_embeddings_matrix, preprocessed_targets)
     training_predictions, test_predictions = decoder_rnn(decoder_embedded_input, decoder_embeddings_matrix, encoder_state, questions_num_words, sequence_length, rnn_size, num_layers, questionswords2int, keep_prob, batch_size)
     return training_predictions, test_predictions
+```
+
+## Word2Vec
+One famous embedding is google news vectors. Gensim is the library used for running word2vec. Cat and Car are very
+distant but coke and pepsi are very similar. For breakfast, lunch, cereal, dinner - cereal doesnt belong to the list.
+model.doesnt_match() does this. 
+
+
+
+## Layer Embeddings
+Layer embeddings are nothing but lookup tables. it is kind of an alternative to one hot encoding.
+The dimensions to keep in mind are:
+
+input_dim = how large is the vocabulary. Number of items in lookup tables. Number of rows/words.
+output_dim = number of vectors/features
+input_length = sequence length. how many input features need to be transformed.
+
+```python
+from tensorflow.keras.layers import Embedding
+
+model = Sequential()
+embedding_layer = Embedding(input_dim=10, output_dim=4, input_length=2)
+model.add(embedding_layer)
+model.compile("adam", "mse")
+
+pred = model.predict(input_date)
+
+embedding_layer.get_weights()
 ```
