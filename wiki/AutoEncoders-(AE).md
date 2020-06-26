@@ -15,6 +15,15 @@ The AutoEncoder encodes itself. This means the input nodes travel through the hi
 These can be used for things such as: feature detection, powerful recommender systems and encoding. Here are some simple examples of how they work:
 
 ![AutoEncoder Examples](https://acius.co.uk/wp-content/themes/acius/machine_learning/imgs/dl/autoencoder-examples.png)
+They can be used for:
+* Removing Noise
+* anomaly detection - if the op data distribution is different than op after passing through autoencoder we will know
+that their was some anomaly.Ideally AE is like compression which is only reducing dimensions. Shouldnt change the data
+itself. This is also true if we want to detect drift in data to gauge if the model needs to be retrained.
+* intrusion detection
+
+The output layer is not going to have any activation, as its just output as input.
+The ip and op layers are same length but middle layers will have less neurons.
 
 Where there is a 1 from the input, there will be on a 1 on on the output. Sometimes AutoEncoders may include a bias, the bias is a constant added to the equation. AutoEncoders with a bias may look like this:
 
