@@ -1,9 +1,9 @@
 XGBoost is a piece of software with an algorithm that is used to increase your model's performance and execution speed. It is mainly used with decision trees.
 
 The documentation and installation instructions can be found [here](https://xgboost.readthedocs.io/).
-
+<!---
 See the code [here](https://github.com/Achronus/Machine-Learning-101/blob/master/coding_templates_and_data_files/machine_learning/8.%20xgboost/xgboost.py) for an example of XGBoost. 
-
+--->
 ```python
 # Fitting XGBoost to the Training set
 from xgboost import XGBClassifier
@@ -14,6 +14,8 @@ classifier.fit(X_train, y_train)
 
 ## Intuition
 ### Example of Adaboost
+This [video](https://youtu.be/LsK-xG1cLYA) by Josh Stramer explains this clearly. Following is the gist of it.
+
 Weak learners are generally stumps with only 2 leaves and 1 root and considering only 1 feature.
 Steps:
 * Assign Sample weight (eg. if 8 sample then each sample gets 1/8)

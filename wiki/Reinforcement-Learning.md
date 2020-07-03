@@ -11,20 +11,20 @@ A real life example consists of training a dog. If it obeys a command, you give 
 This is common reinforcement learning example where a person is challenged with deciding on which machine, out of multiple machines, provides you with the maximum number of return out of a total number of tries (e.g. 100 times).
 
 We would need to assume that each machine has a different result in terms of winning. However, we wouldn't know which machine is best and need to work this out.
-
+<!---
 ![Multi-Armed Bandit Problem](https://acius.co.uk/wp-content/themes/acius/machine_learning/imgs/ml/multi-armed-bandit-problem.png)
-
+--->
 Using the image above as an example, lets say that we know that machine D5 is the best machine. Two factors come into play when trying to determine which machine is the best one: Exploration and Expectation.
 
 The idea is to explore the machines to find out which is the best one and at the same time, exploit the machines to create the maximum return.
-
+<!---
 ![Multi-Armed Bandit Problem Process](https://acius.co.uk/wp-content/themes/acius/machine_learning/imgs/ml/multi-armed-bandit-problem-process.png)
-
+--->
 ## Upper Confidence Bound (UCB)
 This is a popular algorithm to solve the Multi-Armed Bandit Problem.
-
+<!---
 ![Upper Confidence Bound](https://acius.co.uk/wp-content/themes/acius/machine_learning/imgs/ml/upper-confidence-bound.png)
-
+--->
 Using the ad example from the Multi-Armed Bandit Problem, here is a step by step process:
 * Step 1 - Provide each machine with the same value and Confidence Bound.
 * Step 2 - Choose machine at random for testing.
@@ -32,9 +32,9 @@ Using the ad example from the Multi-Armed Bandit Problem, here is a step by step
            has clicked on the ad, the value increases.
 * Step 4 - Confidence Bound shrinks as we are becoming more confident with each prediction. Repeat from Step 2.
 * FIN - One ad is given highest value and is constantly being flagged by algorithm.
-
+<!---
 See the code [here](https://github.com/Achronus/Machine-Learning-101/blob/master/coding_templates_and_data_files/machine_learning/5.%20reinforcement_learning/0.%20upper_confidence_bound.py) for an example of Upper Confidence Bound. 
-
+--->
 ```python
 # Implementing UCB
 import math
@@ -73,11 +73,11 @@ for n in range(0, N):
 
 ## Thompson Sampling
 This algorithm creates distributions based off your data. These distributions provide us with an area of where we think the expected value might be. Thompson Sampling uses the Bayesian Inference to achieve this and is another way to tackle the Multi-Armed Bandit Problem.
-
+<!---
 ![Bayesian Inference](https://acius.co.uk/wp-content/themes/acius/machine_learning/imgs/ml/bayesian-inference.png)
 
 ![Thompson Sampling Process](https://acius.co.uk/wp-content/themes/acius/machine_learning/imgs/ml/thompson-sampling-process.png)
-
+--->
 Using the image below as an example, Thompson Sampling works as the following:
 * Step 1 - We take a value at random from each distribution. The algorithm is more likely to pull a value from the center 
            of the curve rather than the sides.
@@ -87,11 +87,11 @@ Using the image below as an example, Thompson Sampling works as the following:
 * Step 4 - The algorithm adapts to the new information and the curve of the green machine increases in size. Raising the 
            point slightly higher.
 * Step 5 - Step 1 to 4 is then repeated.
-
+<!---
 ![Thompson Sampling](https://acius.co.uk/wp-content/themes/acius/machine_learning/imgs/ml/thompson-sampling.png)
 
 See the code [here](https://github.com/Achronus/Machine-Learning-101/blob/master/coding_templates_and_data_files/machine_learning/5.%20reinforcement_learning/1.%20thompson_sampling.py) for an example of Thompson Sampling.
-
+--->
 ```python
 # Implementing Thompson Sampling
 import random

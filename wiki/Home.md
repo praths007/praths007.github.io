@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Data science fundamentals
+title: Data Science Wiki
 permalink: /dshome/
 ---
 

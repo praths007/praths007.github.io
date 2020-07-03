@@ -68,8 +68,6 @@ This consists of the following:
 
 3. Multivariate normality - This is when using a multiple linear regression and we assume that the residuals are normally distributed. A residual is the distance between an observed value of the dependent variable and the predicted value.
 
-![Residual](https://acius.co.uk/wp-content/themes/acius/machine_learning/imgs/ml/residual.png)
-
 4. No auto-correlation - This means that there is no statistical relationship between the data.
 
 5. Lack of multicollinearity - When using a multiple linear regression, we assume that the independent variables are not highly correlated with each other. This is tested using Variance Inflation Factor (VIF) values.
@@ -119,8 +117,9 @@ This consists of the following:
 ## Polynomial Regression
 This is like the Multiple Linear Regression except it has independent variables with powers. This creates curved lines on a graph rather than straight ones.
 
+<!---
 See the code [here](https://github.com/Achronus/Machine-Learning-101/blob/master/coding_templates_and_data_files/machine_learning/1.%20regression/1.%20non_linear/polynomial_regression.py) for an example of a polynomial regression comparing against a linear regression model. To make a Polynomial Regression use the [PolynomialFeatures](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html) class from the Scikit-Learn library.
-
+--->
 ```python
 # Fitting Polynomial Regression to the dataset
 from sklearn.preprocessing import PolynomialFeatures
@@ -131,9 +130,9 @@ X_poly = poly_reg.fit_transform(X)
 
 ## Support Vector Regression (SVR)
 This is a fast and accurate way of using datasets, it learns quickly and is systematically improvable. Variants of SVR are used throughout science including Kriging and Gaussian Process (GP). SVR is a generalization of the Support Vector Machine (SVM) classification model.
-
+<!---
 See the code [here](https://github.com/Achronus/Machine-Learning-101/blob/master/coding_templates_and_data_files/machine_learning/1.%20regression/1.%20non_linear/support_vector_regression.py) for an example of an SVR model. To make an SVR use the [SVR](http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html) class from the Scikit-Learn library.
-
+--->
 ```python
 # Fitting the SVR to the dataset
 from sklearn.svm import SVR
@@ -143,17 +142,17 @@ regressor.fit(X, y)
 ```
 
 ## Decision Tree Regression
-
+<!---
 ![Decision Tree Graph](https://acius.co.uk/wp-content/themes/acius/machine_learning/imgs/ml/decision-tree-graph.png)
-
+--->
 These are used when the response variable is numeric or continuous. For example, the predicted price of a consumer good. 
 
 We fit a regression model to the target variable using each of the independent variables and the data is split at several split points. At each split point, the "error" between the predicted value and the actual values is squared to get a "Sum of Squared Errors (SSE)". The errors of the split points are compared and the variable/point yielding the lowest SSE is chosen as the root node/split point. This process is recursively continued.
-
+<!---
 ![Decision Tree Regression](https://acius.co.uk/wp-content/themes/acius/machine_learning/imgs/ml/decision-tree-regression.png)
 
 See the code [here](https://github.com/Achronus/Machine-Learning-101/blob/master/coding_templates_and_data_files/machine_learning/1.%20regression/1.%20non_linear/decision_tree_regression.py) for an example of a decision tree regression model. You can make a decision tree regression model by using the [DecisionTreeRegressor](http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html) class from the Scikit-Learn library.
-
+--->
 ```python
 # Fitting the Decision Tree Regression to the dataset
 from sklearn.tree import DecisionTreeRegressor
@@ -171,9 +170,9 @@ How it works:
 * Step 3 - Choose the number Ntree of trees you want to build and repeat steps 1 & 2.
 * Step 4 - For a new data point, make each one of your Ntrees predict the value of Y for the data point in question. 
            Assign the new data point the average across all the predicted Y values.
-
+<!---
 See the code [here](https://github.com/Achronus/Machine-Learning-101/blob/master/coding_templates_and_data_files/machine_learning/1.%20regression/1.%20non_linear/random_forest_regression.py) for an example of a random forest regression model. You can make this using the [RandomForestRegressor](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html) class from the Scikit-Learn library.
-
+--->
 ```python
 # Fitting the Random Forest Regression to the dataset
 from sklearn.ensemble import RandomForestRegressor
@@ -187,11 +186,11 @@ This section consists of 2 helpful factors that can be used to improve regressio
 
 ### R-Squared
 R-squared is a statistical measure of how close the data is to the fitted regression line. It is also known as the coefficient of determination, or the coefficient of multiple determination for multiple regression. This can be used as a 'Goodness of Fit' and is a metric made up of Sum of Squares of Residuals & the Total Sum of Squares. Use this when determining how well the model predicts new observations and whether the model is too complicated.
-
+<!---
 ![R-Squared](https://acius.co.uk/wp-content/themes/acius/machine_learning/imgs/ml/r-squared.png)
 
 ![R-Squared Equations](https://acius.co.uk/wp-content/themes/acius/machine_learning/imgs/ml/r-squared-equations.png)
-
+--->
 R-squared is always between 0 and 100%:
 0% indicates that the model explains none of the variability of the response data around its mean.
 100% indicates that the model explains all the variability of the response data around its mean.
@@ -201,5 +200,6 @@ The higher the R-squared, the better the model fits your data.
 This is a modified version of R-squared that has been adjusted depending on the number of independent variables in the model. Use this when comparing models with different numbers of predictors (IVs).
 
 This metric increases only if the new IV improves the model more than would be expected by chance. It decreases when an IV improves the model by less than expected by chance. The adjusted R-squared can be negative and is always lower than the R-squared.
-
+<!---
 ![R-Squared Equations](https://acius.co.uk/wp-content/themes/acius/machine_learning/imgs/ml/adjusted-r-squared.png)
+--->

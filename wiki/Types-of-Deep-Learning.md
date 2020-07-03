@@ -7,9 +7,9 @@ Common models for this are:
 * Self-Organizing Maps for Feature Extraction
 * Deep Boltzmann Machines for Recommendation Systems
 * AutoEncoders for Recommendation Systems
-
+<!---
 ![Deep Learning Network Types](https://acius.co.uk/wp-content/themes/acius/machine_learning/imgs/dl/dl-network-types.png)
-
+--->
 ### Table of Contents
 * [Supervised Deep Learning Models](/wiki/Types-of-Deep-Learning)
   * [Artificial Neural Networks (ANN)](/wiki/Artificial-Neural-Networks-(ANN))

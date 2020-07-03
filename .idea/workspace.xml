@@ -19,8 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d05b773-c7ac-4819-b3e7-78ae33ba8bff" name="Default Changelist" comment="updated AE">
+    <list default="true" id="6d05b773-c7ac-4819-b3e7-78ae33ba8bff" name="Default Changelist" comment="updated res">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wiki/Association-Rule-Learning.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Association-Rule-Learning.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wiki/Classification-Models.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Classification-Models.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wiki/Clustering-Models.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Clustering-Models.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wiki/Dimensionality-Reduction.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Dimensionality-Reduction.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wiki/Home.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Home.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wiki/Model-Selection.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Model-Selection.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wiki/Regression-Models.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Regression-Models.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wiki/Reinforcement-Learning.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Reinforcement-Learning.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wiki/Types-of-Deep-Learning.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/Types-of-Deep-Learning.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wiki/XGBoost.md" beforeDir="false" afterPath="$PROJECT_DIR$/wiki/XGBoost.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,13 +50,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/wiki" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/wiki" />
       <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/wiki" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -221,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593142206556</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="updated res">
+      <created>1593774688696</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1593774688696</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -270,7 +288,8 @@
     <MESSAGE value="added GANs and Yolo" />
     <MESSAGE value="added edge device stuff" />
     <MESSAGE value="updated AE" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated AE" />
+    <MESSAGE value="updated res" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated res" />
   </component>
   <component name="WindowStateProjectService">
     <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1592632619122">
@@ -281,10 +300,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="72" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1592284710097" />
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1593142211176">
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1593774693281">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1593142211176" />
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1593774693281" />
     <state x="687" y="162" width="618" height="783" key="find.popup" timestamp="1591726687464">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>

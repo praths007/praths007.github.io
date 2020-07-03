@@ -16,13 +16,13 @@ Before using Grid Search we need to use K-Fold Cross Validation on our models.
 This helps with optimizing a way to evaluate our model's performance. K-Fold Cross Validation is a technique that splits our Training set into 10 iterations. 1 iteration consists of 10 folds, we train our model on 9 folds and test our model on 1 fold. 
 
 We run through each iteration using 1 different fold per iteration to test our model on.
-
+<!---
 ![K-Fold Cross Validation](https://acius.co.uk/wp-content/themes/acius/machine_learning/imgs/ml/k-fold-cross-validation.png)
-
+--->
 We then take the average from the accuracies of the 10 iterations and compute the standard deviation.
-
+<!---
 See the code [here](https://github.com/Achronus/Machine-Learning-101/blob/master/coding_templates_and_data_files/machine_learning/7.%20model_selection/grid_search.py) for an example of K-Fold Cross Validation. To make this use the [cross_val_score](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_val_score.html) class from the Scikit-Learn library.
-
+--->
 ```python
 # Applying K-Fold Cross Validation
 from sklearn.model_selection import cross_val_score
@@ -35,9 +35,9 @@ accuracies.std()
 This is used to improve our model's performance and helps us identify which hyperparameters to select and their optimal values when using a machine learning model.
 
 This is done by creating a dictionary containing options of lists of hyperparameters for your model and using it with Grid Search to identify which would be the optimal values & parameters for that model. 
-
+<!---
 See the code [here](https://github.com/Achronus/Machine-Learning-101/blob/master/coding_templates_and_data_files/machine_learning/7.%20model_selection/grid_search.py) for an example of Grid Search. To make this use the [GridSearchCV](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html) class from the Scikit-Learn library.
-
+--->
 ```python
 # Applying Grid Search to find the best model and the best parameters
 from sklearn.model_selection import GridSearchCV

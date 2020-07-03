@@ -25,7 +25,7 @@ navbar-links:
     - Hacker's guide to neuralnets: "http://karpathy.github.io/neuralnets/"
     - Recurrent neural networks: "https://colah.github.io/posts/2015-08-Understanding-LSTMs/"
     - Learn markdown: "http://www.markdowntutorial.com/"
-    - Data science fundamentals: "dshome"
+  Data science wiki: "dshome"
   About Me: "aboutme"
   Contact: "contact"
 
