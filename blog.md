@@ -1,0 +1,14 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+---
+<p>Here are my blog posts in reverse chronological order:</p>
+
+<ul>
+  {% for post in site.posts %}
+    <li class="spaced">
+      <a href="{{ post.url }}">{{ post.title }}</a> {{ post.date | date_to_long_string }}
+    </li>
+  {% endfor %}
+</ul>
