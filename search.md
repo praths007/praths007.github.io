@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Search praths007.github.io"
+title: "Search prathsavale.github.io"
 css: "/css/search.css"
 ---
     

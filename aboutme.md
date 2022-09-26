@@ -8,16 +8,13 @@ permalink: /aboutme/
 
 Hi, I am Prathmesh!
 
-I am a Data Science aficionado and I maintain this blog to write about things I find difficult to understand.
-I believe that the best way to be sure I understand a particular topic is to synthesize the central idea into
-a post, and keep revisiting it to master the concept. 
+I am currently pursuing my masters degree in MSBA (Masters in Business Analytics) from The University of Texas at Austin and I will graduate in May’2023. I also hold a bachelors degree in Computer Engineering from the University of Pune. 
 
-I hold a bachelors degree in Computer Engineering from University of Pune. I have worked with Mu Sigma Inc. as a 
-Decision Scientist for over 3 years and currently work as a Data Analyst with Kiewit Corporation.
+I have worked across techology, retail, and energy industry for ~6 years as a data scientist and analytics consultant. In these roles, I have built end to end analytics solutions for predictive maintenance, forecasting and app analytics helping companies optimize their inventory, reduce cost of operations, and increase customer retention.
 
-I like to solve real world problems using applied mathematics, statistics and computer programming.
 
-In my free time I like to read non-fiction books on astronomy, human evolution and behavioral psychology.
-I also have a special interest in speedcubing and can currently solve a 3x3 Rubik's cube in under a minute.
+I like solving real world problems using applied statistics, machine learning and computer programming.
+
+When I am not working, I like to work out, cook gourmet food or read fiction.
 
 For more information checkout my [resume](/assets/prathmesh_savale_resume.pdf).
