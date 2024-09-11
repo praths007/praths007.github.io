@@ -69,4 +69,4 @@ Coursework: Database Management Systems, Data Structures and Algorithms, Object 
 - [LinkedIn](https://linkedin.com/in/prathmeshsavale)
 - [GitHub Portfolio](https://praths007.github.io)
 
-For more information checkout my [resume](/assets/Prathmesh_Savale_Resume_UT.pdf).
+For more information checkout my [resume](/assets/prathmesh_savale_resume.pdf).
